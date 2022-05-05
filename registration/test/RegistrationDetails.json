@@ -1,0 +1,14 @@
+{
+    "customerId": "07070958",
+    "thingName": "3f696ffe-a5ee-11ec-b403-412ba92faa7b",
+    "clientEndPoint": "ng.acs.api-test.us.csco.cloud",
+    "publishTopic": "messageFromAgent",
+    "subscribeTopic": "3f696ffe-a5ee-11ec-b403-412ba92faa7b/messageFromCloud",
+    "controlpointQueue": "control-point-queue-cluster01-usw2-cx-nprd-test",
+    "agentGatewayQueue": "cloud-agent-queue-cluster01-usw2-cx-nprd-test",
+    "inventoryDataBucket": "CXCA",
+    "healthDataBucket": "healthupload",
+    "syslogDataBucket": "cp_afm_syslog_uploads",
+    "repoBucket": "agentrepo",
+    "cloudAgentUrl": "https://agent-test.us.csco.cloud/"
+}

@@ -1,0 +1,6 @@
+{
+    "interactiveScanUrl": "https://api-cx.cisco.com/emea/ironbank/v1/scan",
+    "notifyUrl": "https://api-cx.cisco.com/emea/ironbank/v1/scan/notify",
+    "tokenUrl": "https://cloudsso.cisco.com/as/token.oauth2",
+    "ironbankAuth": "cmh0Y3k4dzJ2cHQ4cnhxYzl1cDdkcnc5OmNORkRkZEg0bTJnaGhqelM0bUZUclRXZg=="
+}

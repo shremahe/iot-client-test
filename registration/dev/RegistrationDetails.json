@@ -1,0 +1,14 @@
+{
+    "customerId": "07070959",
+    "thingName": "61a27be6-c222-11ec-923c-19933ca7ff70",
+    "clientEndPoint": "ng.cx-cloudagent-iot.api-dev1.us.csco.cloud",
+    "publishTopic": "messageFromAgent",
+    "subscribeTopic": "61a27be6-c222-11ec-923c-19933ca7ff70/messageFromCloud",
+    "controlpointQueue": "cloudAgent-to-controlPoint",
+    "agentGatewayQueue": "CX-Cloud-Agent-MsgQueue",
+    "inventoryDataBucket": "CXCA",
+    "healthDataBucket": "healthupload",
+    "syslogDataBucket": "syslogupload",
+    "repoBucket": "agentrepo",
+    "cloudAgentUrl": "https://agent-dev1.us.csco.cloud/"
+}

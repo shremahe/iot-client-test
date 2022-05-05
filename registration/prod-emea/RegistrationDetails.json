@@ -1,0 +1,14 @@
+{
+    "customerId": "03022010",
+    "thingName": "64e5cb55-aa66-11ec-8222-abd998b80543",
+    "clientEndPoint": "ng.acs.agent.emea.csco.cloud",
+    "publishTopic": "messageFromAgent",
+    "subscribeTopic": "64e5cb55-aa66-11ec-8222-abd998b80543/messageFromCloud",
+    "controlpointQueue": "control-point-queue-cluster01-euc1-cx-prd-cxc",
+    "agentGatewayQueue": "cloud-agent-queue-cluster01-euc1-cx-prd-cxc",
+    "inventoryDataBucket": "CXCA",
+    "healthDataBucket": "healthupload",
+    "syslogDataBucket": "cp_afm_syslog_uploads",
+    "repoBucket": "agentrepo",
+    "cloudAgentUrl": "https://agent.emea.csco.cloud/"
+}

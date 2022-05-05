@@ -17,8 +17,9 @@ AGENTGATEWAY_QUEUE = regdata["agentGatewayQueue"]
 ENDPOINT = regdata['clientEndPoint']
 SUBTOPIC= regdata['subscribeTopic']
 PUBTOPIC= regdata['publishTopic']
+SYSLOG= regdata['syslogDataBucket']
 MESSAGE = json.dumps({"remoteNodeId": CLIENT_ID , "transactionType": "INITIAL-SETUP" , "topic": AGENTGATEWAY_QUEUE ,  "customerId": CUSTOMER_ID , "s3Bucket": "agentrepo/2.0.0" })
-#MESSAGE = json.dumps({"remoteNodeId":CLIENT_ID, "transactionType":"CLI_UPLOADS","transactionId":"null","customerId":"82EPpi6z0QinZX","topic":"afm-cli_data","status":"Success","details":[{"message":"{\"fileName\":\"20039_SIM1296590_82EPpi6z0QinZX_1649251398253_clioutput.txt\",\"serialNumber\":\"SIM1296590\",\"prefix\":\"/st=Campus/cli/custId=82EPpi6z0QinZX/ctrlId=2563fb5c-ce22-4725-be88-7f70a790e359/date=2022-04-22/devId=9c86a46c-8bfc-327a-848e-2088b84d13c1/\",\"customerId\":\"82EPpi6z0QinZX\",\"msgId\":20039,\"ng\":\"true\"}"}]})
+#MESSAGE = json.dumps({"remoteNodeId": CLIENT_ID , "transactionType": "SYSLOG-UPLOAD" , "topic":AGENTGATEWAY_QUEUE , "s3bucket":"cp_afm_syslog_uploads/*"})
 
 # Spin up resources
 event_loop_group = io.EventLoopGroup(1)
