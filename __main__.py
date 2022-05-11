@@ -10,16 +10,20 @@ PATH_TO_AMAZON_ROOT_CA_1 = "/opt/cisco/registration/AmazonRootCA1.pem"
 f = open(PATH_TO_REGJSON) 
 regdata = json.load(f)
 f.close()
-CLIENT_ID= regdata['thingName']
+CLIENT_ID = regdata['thingName']
 CUSTOMER_ID = regdata['customerId']
 CONTROLPOINT_QUEUE = regdata["controlpointQueue"]
 AGENTGATEWAY_QUEUE = regdata["agentGatewayQueue"]
 ENDPOINT = regdata['clientEndPoint']
-SUBTOPIC= regdata['subscribeTopic']
-PUBTOPIC= regdata['publishTopic']
-SYSLOG= regdata['syslogDataBucket']
-MESSAGE = json.dumps({"remoteNodeId": CLIENT_ID , "transactionType": "INITIAL-SETUP" , "topic": AGENTGATEWAY_QUEUE ,  "customerId": CUSTOMER_ID , "s3Bucket": "agentrepo/2.0.0" })
-#MESSAGE = json.dumps({"remoteNodeId": CLIENT_ID , "transactionType": "SYSLOG-UPLOAD" , "topic":AGENTGATEWAY_QUEUE , "s3bucket":"cp_afm_syslog_uploads/*"})
+SUBTOPIC = regdata['subscribeTopic']
+PUBTOPIC = regdata['publishTopic']
+REPO = regdata["repoBucket"]
+SYSLOG = regdata['syslogDataBucket']
+HEALTH = regdata['healthDataBucket']
+
+#MESSAGE = json.dumps({"remoteNodeId": CLIENT_ID ,  "transactionType": "HEALTH-UPLOAD", "topic": AGENTGATEWAY_QUEUE, "s3bucket": HEALTH+"/"+CLIENT_ID})
+MESSAGE = json.dumps({"remoteNodeId": CLIENT_ID , "transactionType": "INITIAL-SETUP" , "topic": AGENTGATEWAY_QUEUE ,  "customerId": CUSTOMER_ID , "s3Bucket": REPO+"/2.0.0" })
+#MESSAGE = json.dumps({"remoteNodeId": CLIENT_ID , "transactionType": "SYSLOG-UPLOAD" , "topic":AGENTGATEWAY_QUEUE , "s3bucket": SYSLOG+"/*"})
 
 # Spin up resources
 event_loop_group = io.EventLoopGroup(1)
@@ -50,8 +54,6 @@ def on_message_received(topic, payload, dup, qos, retain, **kwargs):
         encoding = 'utf-8'
         s_msg = str(payload ,encoding )
         print(s_msg)
-        # disconnect_future = myMQTTClient.disconnect()
-        # disconnect_future.result()
         print("Success!")
 
 subscribe_future, packet_id = myMQTTClient.subscribe(

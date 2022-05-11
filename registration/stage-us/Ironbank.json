@@ -1,0 +1,6 @@
+{
+    "interactiveScanUrl": "https://api-cx-stg.cisco.com/us/stage/ironbank/v1/scan",
+    "notifyUrl": "https://api-cx-stg.cisco.com/us/stage/ironbank/v1/scan/notify",
+    "tokenUrl": "https://cloudsso-test.cisco.com/as/token.oauth2",
+    "ironbankAuth": "OGp4eWs0eXl1YjZ5bXhnazhuZmRtenVhOjV6Q2gyUG00Z01oQ3hGQVdneFV2UFBlZQ=="
+}
