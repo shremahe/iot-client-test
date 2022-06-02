@@ -1,0 +1,14 @@
+{
+    "customerId": "VvA37T5Bvzh1PWy",
+    "thingName": "bddd4bf9-af4c-11ec-9ed2-71920270a994",
+    "clientEndPoint": "ng.acs.agent-perf.apjc.csco.cloud",
+    "publishTopic": "messageFromAgent",
+    "subscribeTopic": "bddd4bf9-af4c-11ec-9ed2-71920270a994/messageFromCloud",
+    "controlpointQueue": "control-point-queue-cluster01-aps2-cx-nprd-perf",
+    "agentGatewayQueue": "cloud-agent-queue-cluster01-aps2-cx-nprd-perf",
+    "inventoryDataBucket": "CXCA",
+    "healthDataBucket": "healthupload",
+    "syslogDataBucket": "cp_afm_syslog_uploads",
+    "repoBucket": "agentrepo",
+    "cloudAgentUrl": "https://agent-perf.apjc.csco.cloud/"
+}
